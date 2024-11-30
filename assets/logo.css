@@ -1,0 +1,10 @@
+/* Styling the logo */
+.logo {
+    width: 150px;         /* Set the width of the logo */
+    height: auto;         /* Maintain aspect ratio */
+    display: block;       /* Make the logo a block-level element */
+    margin: 0 auto;       /* Horizontally center the logo */
+    padding-bottom: 10px; /* Optional: Add space below the logo */
+    border-radius: 8px;   /* Optional: Add rounded corners */
+  }
+  

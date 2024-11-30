@@ -1,0 +1,39 @@
+/* Make the job items visually appealing and spaced */
+.job-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.job-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Add styling for buttons */
+.job-item button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .job-item {
+    padding: 15px;
+  }
+}
+
+/* Adding spacing and layout to the active jobs section */
+.active-jobs-page {
+  padding: 30px;
+}
+
+.active-jobs-page h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}

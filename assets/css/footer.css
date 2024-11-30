@@ -1,0 +1,54 @@
+/* Footer Styling */
+footer {
+    background-color: #343a40; /* Dark background */
+    color: white; /* Text color */
+    padding: 30px 0; /* Padding for top and bottom */
+  }
+  
+  footer .tcu-logo {
+    display: block;
+    margin: 0 auto 5px; /* Center the TCU logo and add margin below */
+  }
+  
+  footer .contact-section {
+    display: flex;
+    justify-content: center; /* Align icons to the center */
+    gap: 10px; /* Space between the icons */
+  }
+  
+  footer .contact-section a {
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  footer .contact-section a:hover {
+    color: #007bff; /* Change icon color on hover */
+  }
+  
+  /* Center Section (Logo & Campus Name) */
+  footer .text-center {
+    text-align: center;
+  }
+  
+  footer .mt-2 {
+    margin-top: 3rem; /* Added margin for spacing */
+  }
+  
+  footer p {
+    margin-bottom: 0;
+  }
+  
+  /* Responsiveness: Adjust layout for mobile */
+  @media (max-width: 768px) {
+    footer .contact-section {
+      justify-content: center; /* Center contact icons on mobile */
+    }
+    footer .contact-section i {
+      font-size: 1.5rem; /* Smaller icons on mobile */
+    }
+  
+    /* Make sure logos are still aligned properly on small screens */
+    footer .tcu-logo {
+      width: 40px; /* Adjust size of TCU logo on small screens */
+    }
+  }
+  

@@ -1,0 +1,75 @@
+/* Sidebar Styling */
+.sidebar {
+  background-color: #060607;
+  color: #fff;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  padding: 20px;
+}
+.sidebar img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar ul li {
+  margin-bottom: 2rem;
+}
+.sidebar ul li a {
+  color: #adb5bd;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+}
+.sidebar ul li a:hover {
+  color: #fff;
+}
+
+/* Content Styling */
+main {
+  padding: 40px;
+}
+.overview-page h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.card {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.card .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.card .desc {
+  font-size: 1rem;
+  color: #080808;
+}
+
+/* active sidebar */gggrc f
+.sidebar a.active,
+.navbar-nav .nav-item .active {
+  background-color: #f8f9fa; /* or any color you prefer */
+  color: #007bff; /* active text color */
+}
+
+.sidebar a:hover,
+.navbar-nav .nav-item a:hover {
+  color: #0a0a0a !important;
+  background-color: #f1f1f1;
+}
+

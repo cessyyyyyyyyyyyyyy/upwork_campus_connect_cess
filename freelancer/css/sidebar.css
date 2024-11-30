@@ -1,0 +1,88 @@
+/* Custom Styles for Freelancer Page */
+.navbar-dark.bg-dark {
+  padding: 1rem;
+  background-color: #003366 !important; /* Dark blue background for navbar */
+}
+
+.sidebar {
+  background-color: #050607; /* Sidebar dark blue */
+  color: #fff;
+  padding: 20px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar ul {
+  padding-left: 0;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 12px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #34495e;
+}
+
+.sidebar img {
+  width: 150px;  /* Adjust the size of the logo */
+  margin: 20px auto; /* Center the logo with top margin */
+  display: block;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.card .title {
+  font-weight: bold;
+  color: #3498db; /* Freelancer-themed blue */
+}
+
+.card .desc {
+  color: #333;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.overview-page h1 {
+  font-size: 2.5rem;
+  color: #003366;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1;
+  min-width: 220px;
+  padding: 20px;
+}
+
+/* Mobile view: Centered and Stack cards */
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

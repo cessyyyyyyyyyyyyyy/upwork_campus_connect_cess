@@ -1,0 +1,31 @@
+/* Content Styling */
+.overview-page h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.table th,
+.table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table th {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f8f9fa;
+}
+
+.btn-action {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+/* Responsive Table */
+.table-responsive {
+  max-height: 400px;
+  overflow-y: auto;
+}
