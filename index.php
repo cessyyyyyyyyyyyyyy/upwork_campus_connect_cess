@@ -30,7 +30,7 @@ $result_services = $conn->query($query_services);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
     <title>Upwork Campus Connect</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet" />
@@ -43,7 +43,7 @@ $result_services = $conn->query($query_services);
       <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-sm">
         <div class="container">
           <a class="navbar-brand" href="index.php">
-            <img src="img/logo.png" alt="logo" width="100" height="100" />
+            <img src="assets/logo.png" alt="logo" width="100" height="100">
             <span class="ms-2">Campus Connect</span>
           </a>
 
@@ -143,7 +143,7 @@ $result_services = $conn->query($query_services);
     <div class="row align-items-center">
       <!-- Left Section: Partnered with TCU -->
       <div class="col-md-4 text-center text-md-left">
-        <img src="img/tcu_logo.png" alt="Taguig City University" width="50" class="tcu-logo">
+        <img src="assets/tcu_logo.png" alt="Taguig City University" width="50" class="tcu-logo">
         <p>Partnered with</p>
         <p><strong>Taguig City University</strong></p>
       </div>
@@ -151,9 +151,9 @@ $result_services = $conn->query($query_services);
       <!-- Center Section: Upwork Campus Connect Logo and Name -->
       <div class="col-md-4 text-center">
         <a href="index.html">
-        <img src="img/logo.png" alt="logo" width="90" height="90" />
+        <img src="assets/logo.png" alt="logo" width="50" height="50" style="backdrop-filter: invert(1); border-radius: 50%"/>
         </a>
-        <p class="mt-2">Campus Connect</p>
+        <p class="mt-2"><strong>Campus Connect</strong></p>
       </div>
 
       <!-- Right Section: Contact Us (Social Icons) -->

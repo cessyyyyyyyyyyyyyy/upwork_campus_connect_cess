@@ -12,7 +12,8 @@ $query = "
         p.project_id, p.status, p.started_at, p.completed_at, p.cancelled_at, 
         s.title AS project_title, 
         CONCAT(u.first_name, ' ', u.last_name) AS freelancer_name, 
-        p.review_left, p.payment_status, p.amount_paid
+        p.review_left, p.payment_status, p.amount_paid,
+        p.client_id, p.freelancer_id
     FROM projects p
     JOIN services s ON p.job_id = s.service_id
     JOIN users u ON p.freelancer_id = u.user_id
@@ -163,7 +164,7 @@ if (isset($_POST['update_status'])) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
     <title>Manage Projects - Upwork Campus Connect</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/css/resets.css" />
@@ -245,6 +246,8 @@ if (isset($_POST['update_status'])) {
                               <button type="submit" name="update_status" class="btn btn-sm btn-primary mt-2">Update Status</button>
                             <?php endif; ?>
                           </form>
+                          <a href="chat.php?sender_id=<?php echo $row['client_id']; ?>&receiver_id=<?php echo $row['freelancer_id']; ?>" 
+                          class="btn btn-primary">Message Freelancer</a>
                         </td>
                         <td>
                           <?php if ($row['status'] == 'completed' && $row['review_left'] == 0): ?>

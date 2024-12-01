@@ -19,7 +19,7 @@
   margin-bottom: 2rem;
 }
 .sidebar ul li a {
-  color: #adb5bd;
+  color: #333;
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
@@ -60,16 +60,16 @@ main {
   color: #080808;
 }
 
-/* active sidebar */gggrc f
+/* active sidebar */
 .sidebar a.active,
 .navbar-nav .nav-item .active {
-  background-color: #f8f9fa; /* or any color you prefer */
-  color: #007bff; /* active text color */
+  background-color: #333; /* or any color you prefer */
+  color: #fff; /* active text color */
 }
 
 .sidebar a:hover,
 .navbar-nav .nav-item a:hover {
   color: #0a0a0a !important;
-  background-color: #f1f1f1;
+  background-color: hsl(0, 0%, 20%, 0.1);
 }
 
