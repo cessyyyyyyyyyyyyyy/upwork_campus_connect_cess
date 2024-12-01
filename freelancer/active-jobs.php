@@ -8,7 +8,8 @@ $query = "
         p.project_id, p.status, p.started_at, p.completed_at, p.cancelled_at, 
         s.title AS project_title, 
         CONCAT(u.first_name, ' ', u.last_name) AS freelancer_name, 
-        p.payment_status, p.amount_paid
+        p.payment_status, p.amount_paid,
+        p.client_id, p.freelancer_id
     FROM projects p
     JOIN services s ON p.job_id = s.service_id
     JOIN users u ON p.freelancer_id = u.user_id
@@ -29,30 +30,17 @@ if (!$result) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
     <title>My Active Jobs - Freelancer View</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="../assets/css/resets.css">
-
 </head>
 <body>
 <div class="container-fluid">
     <div class="row">
         <!-- Sidebar -->
-        <nav class="col-md-3 col-lg-2 sidebar bg-dark text-white d-none d-md-block">
-            <a href="../index.php">
-            <img src="../img/logo.png" alt="logo"/>
-            </a>
-
-                <ul>
-                    <li><a href="get_overview_data.php">Overview</a></li>
-                    <li><a href="active-jobs.php">Active Jobs</a></li>
-                    <li><a href="post-job.php">Post a Job</a></li>
-                    <li><a href="earnings.php">Earnings</a></li>
-                    <li><a href="messaging_freelancer.php">Message</a></li>
-                    <li><a href="../logout.php">Logout</a></li>
-                </ul>
-            </nav>
+        <?php include('includes/sidebar.php'); ?>
 
             <main class="col-md-9 col-lg-10">
                 <section class="overview-page">
@@ -73,6 +61,7 @@ if (!$result) {
                                         <th>Completion Date</th>
                                         <th>Cancellation Date</th>
                                         <th>Payment</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -109,6 +98,10 @@ if (!$result) {
                                                         echo '<span class="badge bg-danger">Unpaid</span> - ₱' . number_format($row['amount_paid'], 2);
                                                     }
                                                 ?>
+                                            </td>
+                                            <td>
+                                                <a href="chat.php?client_id=<?php echo $row['client_id']; ?>" 
+                                                    class="btn btn-primary">Message Client</a>
                                             </td>
                                         </tr>
                                     <?php endwhile; ?>

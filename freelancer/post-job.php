@@ -46,6 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
     <title>Post a Job - Upwork Campus Connect</title>
     <link
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css"
@@ -57,28 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="container-fluid">
         <div class="row">
-            <!-- Sidebar (Desktop) -->
-            <nav class="col-md-3 col-lg-2 sidebar bg-dark text-white d-none d-md-block">
-            <a href="../index.php">
-            <img
-  src="../img/logo.png"
-  alt="Logo"
-  class="logo mb-4"
-/>
-
-</a>
-
-                <ul>
-                    <li><a href="get_overview_data.php">Overview</a></li>
-                    <li><a href="notifications.php">Notifications</a></li>
-                    <li><a href="active-jobs.php">Active Jobs</a></li>
-                    <li><a href="post-job.php">Post a Job</a></li>
-                    <li><a href="earnings.php">Earnings</a></li>
-                    <li><a href="messaging_freelancer.php">Message</a></li>
-                    <li><a href="../logout.php">Logout</a></li>
-                </ul>
-            </nav>
-
+            <!-- Sidebar -->
+            <?php include('includes/sidebar.php'); ?>
             <!-- Main Content -->
             <main class="col-md-9 col-lg-10">
                 <h1 class="my-4">Post a Job</h1>

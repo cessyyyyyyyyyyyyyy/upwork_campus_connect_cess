@@ -3,8 +3,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
 ?>
 
 <!-- Sidebar (Desktop) -->
-<nav class="col-md-3 col-lg-2 sidebar bg-dark text-white d-none d-md-block">
-  <img src="../img/logo.png" alt="Logo" />
+<nav class="col-md-3 col-lg-2 sidebar bg-light text-black d-none d-md-block" style="background-color: #f5f5f5 !important">
+  <img src="../assets/logo.png" alt="Logo icon" class="logo">
  
   <ul class="mt-4">
     <li><a href="index.php" class="<?php echo ($current_page == 'index.php') ? 'active' : ''; ?>">Overview</a></li>
@@ -12,7 +12,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <li><a href="services.php" class="<?php echo ($current_page == 'services.php') ? 'active' : ''; ?>">Services</a></li>
     <li><a href="payments.php" class="<?php echo ($current_page == 'payments.php') ? 'active' : ''; ?>">Payments</a></li>
     <li><a href="reviews.php" class="<?php echo ($current_page == 'reviews.php') ? 'active' : ''; ?>">Reviews</a></li>
-    <li><a href="messaging_client.php" class="<?php echo ($current_page == 'client_message.php') ? 'active' : ''; ?>">Message</a></li>
+    <li><a href="chat.php" class="<?php echo ($current_page == 'chat.php') ? 'active' : ''; ?>">Messages</a></li>
     <li><a href="../logout.php">Logout</a></li>
   </ul>
 </nav>
@@ -48,7 +48,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <a class="nav-link <?php echo ($current_page == 'reviews.php') ? 'active' : ''; ?>" href="reviews.php">Reviews</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link <?php echo ($current_page == 'client_massage.php') ? 'active' : ''; ?>" href="client_message.php">Message</a>
+        <a class="nav-link <?php echo ($current_page == 'chat.php') ? 'active' : ''; ?>" href="chat.php">Messages</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="../logout.php">Logout</a>

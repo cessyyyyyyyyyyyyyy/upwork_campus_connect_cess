@@ -9,11 +9,7 @@ require_once 'includes/connection.php';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="assets/logo-placeholder-white.svg"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css"
       rel="stylesheet"
@@ -25,9 +21,8 @@ require_once 'includes/connection.php';
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-sm">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
-         
-          
+        <a class="navbar-brand" href="index.php">
+          <img src="assets/logo.png" alt="logo" width="100" height="100">
           <span class="ms-2">Campus Connect</span>
         </a>
         <form class="d-flex ms-auto me-3">
